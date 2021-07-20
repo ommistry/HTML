@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Student Record</title>
+</head>
+<script>
+			funtion check(){
+			var myInput = document.getElementById("psw");
+
+			if(myInput == "int222")
+			{
+				document.getElementById("submit").disabled = false;
+				return true;
+			}
+			else
+			{
+				document.getElementById("submit").disabled = true;
+				return false;
+			}
+			}	
+				
+			</script>
+<body>
+	<form action="http://www.elizabethcastro.com/html6ed/examples/forms/showform.php" method="post" name="Input" onsubmit="return check()">
+		<label>Student Full Name: </label><input type="text" name="Student Name"></input><br/><br>
+		<label>Student Number: </label><input type="number" name="Student Number"></input>
+		<fieldset>
+			<legend>Gender:</legend>
+			<label>Male </label><input type="radio" name="gender" value="Male" /><br/>
+			<label>Female</label><input type="radio" name="gender" value="Female" />
+		</fieldset>
+
+		<p><br/>Which Assignment(s) from the course outline have you completed already?</p>
+
+		<input type="checkbox" name="Assignment 1" value="Assignment 1" />Assignment #1<br/>
+		<input type="checkbox" name="Assignment 2" value="Assignment 2"/>Assignment #2<br/>
+		<input type="checkbox" name="Assignment 3" value="Assignment 3" />Assignment #3<br/>
+		<input type="checkbox" name="Assignment 4" value="Assignment 4" />Assignment #4<br/>
+		<input type="checkbox" name="Assignment 5" value="Assignment 5"/>Assignment #5<br/>
+		<input type="checkbox" name="Assignment 6" value="Assignment 6" />Assignment #6<br/>
+		<br/>
+		<p>The following below are all the topics that we will be covering this semester. Select the topic(s) that you haven't fully understood yet.</p>
+		<select name="course">
+			<option>HTML</option>
+			<option>BASIC XHTML</option>
+			<option>LINKS & LISTS</option>
+			<option>TABLES</option>
+			<option>FRAMES</option>
+			<option>FORMS</option>
+			<option>DHTML & CSS</option>
+			<option>JAVASCRIPT OBJECTS & EVENTS.</option>
+		</select>
+		<br/><br/>
+		<label>General Comments:</label><br/>
+		<textarea rows="10" cols="30"></textarea><br/>
+		<label>Please Enter your password in order to submit the form.</label><br/>
+		<label><b>Password:</b></label>
+		<input type="password" id = "psw" onchange="check()" required></input>
+
+		
+			
+		<br/>
+
+		<input type="submit" id="submit"  />
+		<input type="reset" name="reset">
+
+		</form>
+		
+</body>
+</html>
